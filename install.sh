@@ -28,4 +28,4 @@ echo "--------- 🟢 Start compose up  -----------"
 wget https://raw.githubusercontent.com/thangnch/MIAI_n8n_dockercompose/refs/heads/main/compose.yaml -O compose.yaml
 export EXTERNAL_IP=http://"$(hostname -I | cut -f1 -d' ')"
 docker compose up -d
-echo "--------- 🟢 Finish! Wait and test in browser at url http://VPS_ID:5678 for n8n UI -----------"
+echo "--------- 🟢 Finish! Wait and test in browser at url http://<VPS IP Address>:5678 for n8n UI -----------"
