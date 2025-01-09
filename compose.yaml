@@ -29,6 +29,6 @@ services:
       - GENERIC_TIMEZONE=Asia/Ho_Chi_Minh
       - N8N_EDITOR_BASE_URL=${EXTERNAL_IP}
     ports:
-      - "5678:5678"
+      - "80:5678"
     volumes:
       - /root/vol_n8n:/home/node/.n8n
