@@ -25,6 +25,7 @@ sudo chmod -R 755 vol_localai
 sudo chown -R 1000:1000 vol_n8n
 sudo chmod -R 755 vol_n8n
 echo "--------- 🟢 Start compose up  -----------"
+wget https://raw.githubusercontent.com/thangnch/MIAI_n8n_dockercompose/refs/heads/main/compose.yaml -O compose.yaml
 export EXTERNAL_IP=http://"$(hostname -I | cut -f1 -d' ')"
 docker compose up -d
 echo "--------- 🟢 Finish! Wait and test in browser at url http://VPS_ID:5678 for n8n UI -----------"
