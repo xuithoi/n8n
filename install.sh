@@ -6,6 +6,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 apt-cache policy docker-ce
 sudo apt install -y docker-ce
+echo "--------- 🔴 Finish install docker -----------"
 echo "--------- 🟢 Start install nvidia support 4 docker -----------"
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
 | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
@@ -16,6 +17,7 @@ sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
+echo "--------- 🔴 Finish install nvidia support 4 docker -----------"
 echo "--------- 🟢 Start creating folder -----------"
 cd ~
 mkdir vol_localai
@@ -24,8 +26,9 @@ sudo chown -R 1000:1000 vol_localai
 sudo chmod -R 755 vol_localai
 sudo chown -R 1000:1000 vol_n8n
 sudo chmod -R 755 vol_n8n
-echo "--------- 🟢 Start compose up  -----------"
+echo "--------- 🔴 Finish creating folder -----------"
+echo "--------- 🟢 Start docker compose up  -----------"
 wget https://raw.githubusercontent.com/thangnch/MIAI_n8n_dockercompose/refs/heads/main/compose.yaml -O compose.yaml
 export EXTERNAL_IP=http://"$(hostname -I | cut -f1 -d' ')"
 docker compose up -d
-echo "--------- 🟢 Finish! Wait and test in browser at url $EXTERNAL_IP:5678 for n8n UI -----------"
+echo "--------- 🔴 Finish! Wait a few minutes and test in browser at url $EXTERNAL_IP for n8n UI -----------"
