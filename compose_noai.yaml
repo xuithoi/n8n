@@ -1,7 +1,7 @@
 
 services:
   svr_n8n:
-    image: n8nio/n8n
+    image: n8nio/n8n:1.71.3
     container_name: cont_n8n
     environment:
       - N8N_SECURE_COOKIE=false
