@@ -11,9 +11,9 @@
 - Host by: [https://localai.io/basics/container/](https://localai.io/basics/container/)
 - Flow:
 
-![Draw -142.jpg](N8N%20+%20LLM%20+%20SD%20in%20one%20shot!!!%20175d9a2eab56808ab37cca59d1df931f/Draw_-142.jpg)
+![Draw -142.jpg](setup guide files/Draw_-142.jpg)
 
-![Draw -143.jpg](N8N%20+%20LLM%20+%20SD%20in%20one%20shot!!!%20175d9a2eab56808ab37cca59d1df931f/Draw_-143.jpg)
+![Draw -143.jpg](setup guide files/Draw_-143.jpg)
 
 ```bash
 https://www.api-ninjas.com/api/randomword
