@@ -1,5 +1,5 @@
 services:
-	svr_localai:
+  svr_localai:
     image: localai/localai:latest-gpu-nvidia-cuda-12
     container_name: cont_localai
     restart: always
