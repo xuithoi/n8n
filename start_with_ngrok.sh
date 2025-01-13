@@ -7,7 +7,7 @@ wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 sudo apt install -y jq
 echo "🔴🔴🔴 Please login into ngrok.com and paste your token here:"
-read token
+read -p "Token : " token
 ngrok config add-authtoken $token
 ngrok http 80 > /dev/null &
 echo "🔴🔴🔴 Please wait Ngrok to start...."
