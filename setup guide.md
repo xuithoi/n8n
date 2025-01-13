@@ -9,15 +9,6 @@
 ```
 
 - Host by: [https://localai.io/basics/container/](https://localai.io/basics/container/)
-- Flow:
-
-![Draw -142.jpg](setup guide files/Draw_-142.jpg)
-
-![Draw -143.jpg](setup guide files/Draw_-143.jpg)
-
-```bash
-https://www.api-ninjas.com/api/randomword
-```
 
 ```bash
 #!/bin/bash
