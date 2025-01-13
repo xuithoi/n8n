@@ -50,7 +50,7 @@ echo "--------- 🔴 Finish! Wait a few minutes and test in browser at url $EXTE
 ```yaml
 
 services:
-	svr_localai:
+  svr_localai:
     image: localai/localai:latest-gpu-nvidia-cuda-12
     container_name: cont_localai
     restart: always
@@ -70,7 +70,6 @@ services:
           - driver: nvidia
             device_ids: ['0']
             capabilities: [gpu]
-    
   svr_n8n:
     image: n8nio/n8n:1.71.3
     container_name: cont_n8n
