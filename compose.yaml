@@ -19,7 +19,6 @@ services:
           - driver: nvidia
             device_ids: ['0']
             capabilities: [gpu]
-    
   svr_n8n:
     image: n8nio/n8n:1.71.3
     container_name: cont_n8n
