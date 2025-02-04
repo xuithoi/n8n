@@ -13,7 +13,7 @@ ngrok config add-authtoken $token
 ngrok http --url=$domain 80 > /dev/null &
 echo "🔴🔴🔴 Please wait Ngrok to start...."
 sleep 5
-export EXTERNAL_IP="$(curl http://localhost:4040/api/tunnels | jq ".tunnels[0].public_url")"
+sudo export EXTERNAL_IP="$(curl http://localhost:4040/api/tunnels | jq ".tunnels[0].public_url")"
 echo Got Ngrok URL = $EXTERNAL_IP
 echo "--------- 🔴 Finish Ngrok setup -----------"
 echo "--------- 🟢 Start Docker compose up  -----------"
