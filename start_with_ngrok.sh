@@ -1,6 +1,6 @@
 #!/bin/bash                                                                                sngrok.sh                                                                                                  
 echo "--------- 🟢 Start Docker compose down  -----------"
-docker compose down
+sudo -E docker compose down
 echo "--------- 🔴 Finish Docker compose down -----------"
 echo "--------- 🟢 Start Ngrok setup -----------"
 wget -o ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
@@ -17,5 +17,5 @@ export EXTERNAL_IP="$(curl http://localhost:4040/api/tunnels | jq ".tunnels[0].p
 echo Got Ngrok URL = $EXTERNAL_IP
 echo "--------- 🔴 Finish Ngrok setup -----------"
 echo "--------- 🟢 Start Docker compose up  -----------"
-docker compose up -d
+sudo -E docker compose up -d
 echo "--------- 🔴 Finish! Wait a few minutes and test in browser at url $EXTERNAL_IP for n8n UI -----------"
