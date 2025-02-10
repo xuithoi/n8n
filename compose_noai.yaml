@@ -7,6 +7,7 @@ services:
       - GENERIC_TIMEZONE=Asia/Ho_Chi_Minh
       - N8N_EDITOR_BASE_URL=${EXTERNAL_IP}
       - WEBHOOK_URL=${EXTERNAL_IP}
+      - N8N_DEFAULT_BINARY_DATA_MODE=filesystem
     ports:
       - "80:5678"
     volumes:
