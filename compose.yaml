@@ -31,4 +31,4 @@ services:
     ports:
       - "80:5678"
     volumes:
-      - /root/vol_n8n:/home/node/.n8n
+      - ${CURR_DIR}/vol_n8n:/home/node/.n8n
