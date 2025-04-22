@@ -31,6 +31,7 @@ services:
       - N8N_MCP_ENABLED=true
       - N8N_MCP_MODE=server
       - N8N_HOST=${EXTERNAL_IP}
+      - WEBHOOK_URL=${EXTERNAL_IP}
     ports:
       - "80:5678"
     volumes:
